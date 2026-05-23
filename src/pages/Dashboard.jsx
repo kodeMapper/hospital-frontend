@@ -41,6 +41,7 @@ const Dashboard = () => {
     const load = async () => {
       try {
         setLoading(true);
+
         const [doctors, interns, patients, cases] = await Promise.all([
           getDoctors(),
           getInterns(),
@@ -57,8 +58,13 @@ const Dashboard = () => {
 
         setRecentPatients(patients.slice(0, 5));
         setRecentCases(cases.slice(0, 5));
+
       } catch (err) {
-        setError(err?.response?.data?.message || err.message || 'Failed to load dashboard data');
+        setError(
+            err?.response?.data?.message ||
+            err.message ||
+            'Failed to load dashboard data'
+        );
       } finally {
         setLoading(false);
       }
