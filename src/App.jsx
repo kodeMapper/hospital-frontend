@@ -6,7 +6,7 @@ import Staff from './pages/Staff';
 import Cases from './pages/Cases';
 import AddPatient from './pages/AddPatient';
 import AddDoctor from './pages/AddDoctor';
-import AddIntern from './pages/AddIntern';
+import AddIntern from './pages/AddIntern.jsx';
 import AddCase from './pages/AddCase';
 
 function App() {
